@@ -1,7 +1,7 @@
 {
   "name": "fleeting",
   "version": "0.1.0",
-  "homepage": "http://alenthomas.github.io/fleeting-time"
+  "homepage": "http://alenthomas.github.io/fleeting-time",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
