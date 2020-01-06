@@ -1,53 +1,55 @@
-import React, { useState }from 'react';
+import React from 'react';
 import { getRemainingDays, getRemainingHours, getRemainingDaysInWeek } from './utils';
-import { DAYS } from './constants';
 import dayjs from 'dayjs';
 
 import './App.scss';
 
 
-function YearProgress() {
-  let [currentDate, changeDate] = useState(0);
-  currentDate = getRemainingDays();
-  setInterval(() => changeDate(getRemainingDays), DAYS);
+function YearProgress({progress}) {
   return (
     <div className='progress year-progress'>
-      <div>Year Progress: {`${currentDate} %`}</div>
+      <div>Year Progress: {`${progress} %`}</div>
     </div>
   )
 }
 
-function DayProgress() {
-  let [currentHour, changeHour] = useState(0);
-  currentHour = getRemainingHours();
-  setInterval(() => changeHour(getRemainingHours), 1000 * 30);
+function DayProgress({progress}) {
   return (
     <div className='progress day-progress'>
-      <div>Day Progress: {`${currentHour} %`}</div>
+      <div>Day Progress: {`${progress} %`}</div>
     </div>
   )
 }
 
-function WeekProgress() {
-  let [currentWeekHour, changeWeekHour] = useState(0);
-  currentWeekHour = getRemainingDaysInWeek();
-  setInterval(() => changeWeekHour(getRemainingDaysInWeek), 1000 * 60 * 60);
+function WeekProgress({progress}) {
   return (
     <div className='progress week-progress'>
-      <div>Current Week Progress: {`${currentWeekHour} %`}</div>
+      <div>Current Week Progress: {`${progress} %`}</div>
     </div>
   )
 }
-
-function App() {
-  return (
+class App extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { yearProgress: getRemainingDays(), weekProgress: getRemainingDaysInWeek(), dayProgress: getRemainingHours() };
+  }
+  componentDidMount() {
+    setInterval(this.refresh, 1000);
+  }
+  refresh = () => {
+    let [yearProgress, weekProgress, dayProgress] = [getRemainingDays(), getRemainingDaysInWeek(), getRemainingHours()];
+    this.setState({ yearProgress, weekProgress, dayProgress });
+  }
+  render() {
+    return (
     <div className="App">
       <h3>{dayjs().year()} so far</h3>
-      <YearProgress />
-      <WeekProgress />
-      <DayProgress />
+      <YearProgress progress={this.state.yearProgress} />
+      <WeekProgress progress={this.state.weekProgress} />
+      <DayProgress progress={this.state.dayProgress} />
     </div>
   );
+  }
 }
 
 export default App;

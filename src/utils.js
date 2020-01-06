@@ -33,3 +33,9 @@ export function getRemainingDaysInWeek() {
   const hours = (604800 - weekEnd.diff(now, 'second', true)) * 100 / 604800;
   return round(hours);
 }
+
+// export function getRemainingWorkDayHours(start = 9, end = 17) {
+//   const now = dayjs();
+//   const dayEnd = dayjs().hour(hour);
+//   const hours = ()
+// }
