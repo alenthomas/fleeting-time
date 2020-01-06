@@ -9,7 +9,7 @@ function YearProgress({progress}) {
   return (
     <div className='block box'>
       <div className='content is-medium'>Year Progress: <strong>{`${progress}%`}</strong></div>
-      <progress className="progress is-info" value={`${progress}`} max="100">{`${progress}%`}</progress>
+      <progress className="progress is-primary" value={`${progress}`} max="100">{`${progress}%`}</progress>
     </div>
   )
 }
