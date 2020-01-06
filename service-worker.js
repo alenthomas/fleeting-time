@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/fleeting-time/precache-manifest.52e073aa730470b115387ab08c2f1b9f.js"
+  "/fleeting-time/precache-manifest.11aa41996301155314ec8b7807c2e227.js"
 );
 
 self.addEventListener('message', (event) => {
