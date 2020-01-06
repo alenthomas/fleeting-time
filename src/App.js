@@ -8,7 +8,8 @@ import './App.scss';
 function YearProgress({progress}) {
   return (
     <div className='progress year-progress'>
-      <div>Year Progress: {`${progress} %`}</div>
+      <div>Year Progress: <strong>{`${progress}%`}</strong></div>
+      <progress className="progress" value={`${progress}`} max="100">{`${progress}%`}</progress>
     </div>
   )
 }
@@ -16,7 +17,8 @@ function YearProgress({progress}) {
 function DayProgress({progress}) {
   return (
     <div className='progress day-progress'>
-      <div>Day Progress: {`${progress} %`}</div>
+      <div>Day Progress: <strong>{`${progress}%`}</strong></div>
+      <progress className="progress" value={`${progress}`} max="100">{`${progress}%`}</progress>
     </div>
   )
 }
@@ -24,7 +26,8 @@ function DayProgress({progress}) {
 function WeekProgress({progress}) {
   return (
     <div className='progress week-progress'>
-      <div>Current Week Progress: {`${progress} %`}</div>
+      <div>Current Week Progress: <strong>{`${progress}%`}</strong></div>
+      <progress className="progress" value={`${progress}`} max="100">{`${progress}%`}</progress>
     </div>
   )
 }

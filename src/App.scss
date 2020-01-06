@@ -1,7 +1,12 @@
 @import 'normalize.css';
 @import 'skeleton.css';
+
 .App {
   text-align: center;
+}
+
+progress {
+  width: 25%;
 }
 
 @media (prefers-reduced-motion: no-preference) {
