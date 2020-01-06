@@ -1,22 +1,25 @@
 {
   "files": {
-    "main.css": "/fleeting-time/static/css/main.b87a496b.chunk.css",
-    "main.js": "/fleeting-time/static/js/main.e9f10f3b.chunk.js",
-    "main.js.map": "/fleeting-time/static/js/main.e9f10f3b.chunk.js.map",
-    "runtime-main.js": "/fleeting-time/static/js/runtime-main.b5b64f82.js",
-    "runtime-main.js.map": "/fleeting-time/static/js/runtime-main.b5b64f82.js.map",
-    "static/js/2.337da006.chunk.js": "/fleeting-time/static/js/2.337da006.chunk.js",
-    "static/js/2.337da006.chunk.js.map": "/fleeting-time/static/js/2.337da006.chunk.js.map",
+    "main.css": "/fleeting-time/static/css/main.76a797be.chunk.css",
+    "main.js": "/fleeting-time/static/js/main.f41f3204.chunk.js",
+    "main.js.map": "/fleeting-time/static/js/main.f41f3204.chunk.js.map",
+    "runtime-main.js": "/fleeting-time/static/js/runtime-main.5864ff47.js",
+    "runtime-main.js.map": "/fleeting-time/static/js/runtime-main.5864ff47.js.map",
+    "static/css/2.c03d8bb0.chunk.css": "/fleeting-time/static/css/2.c03d8bb0.chunk.css",
+    "static/js/2.a187a03b.chunk.js": "/fleeting-time/static/js/2.a187a03b.chunk.js",
+    "static/js/2.a187a03b.chunk.js.map": "/fleeting-time/static/js/2.a187a03b.chunk.js.map",
     "index.html": "/fleeting-time/index.html",
-    "precache-manifest.69d0bf936db332d7a52bee8c42f1771e.js": "/fleeting-time/precache-manifest.69d0bf936db332d7a52bee8c42f1771e.js",
+    "precache-manifest.9e20a6c5454dfb92aa65c04f0686b2eb.js": "/fleeting-time/precache-manifest.9e20a6c5454dfb92aa65c04f0686b2eb.js",
     "service-worker.js": "/fleeting-time/service-worker.js",
-    "static/css/main.b87a496b.chunk.css.map": "/fleeting-time/static/css/main.b87a496b.chunk.css.map",
-    "static/js/2.337da006.chunk.js.LICENSE": "/fleeting-time/static/js/2.337da006.chunk.js.LICENSE"
+    "static/css/2.c03d8bb0.chunk.css.map": "/fleeting-time/static/css/2.c03d8bb0.chunk.css.map",
+    "static/css/main.76a797be.chunk.css.map": "/fleeting-time/static/css/main.76a797be.chunk.css.map",
+    "static/js/2.a187a03b.chunk.js.LICENSE": "/fleeting-time/static/js/2.a187a03b.chunk.js.LICENSE"
   },
   "entrypoints": [
-    "static/js/runtime-main.b5b64f82.js",
-    "static/js/2.337da006.chunk.js",
-    "static/css/main.b87a496b.chunk.css",
-    "static/js/main.e9f10f3b.chunk.js"
+    "static/js/runtime-main.5864ff47.js",
+    "static/css/2.c03d8bb0.chunk.css",
+    "static/js/2.a187a03b.chunk.js",
+    "static/css/main.76a797be.chunk.css",
+    "static/js/main.f41f3204.chunk.js"
   ]
 }
