@@ -37,6 +37,7 @@
     ]
   },
   "devDependencies": {
+    "bulma": "^0.8.0",
     "gh-pages": "^2.1.1"
   }
 }

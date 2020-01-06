@@ -1,13 +1,9 @@
-@import 'normalize.css';
-@import 'skeleton.css';
+@import '../node_modules/bulma/css/bulma.min.css';
 
-.App {
+.container {
   text-align: center;
-}
-
-progress {
-  width: 25%;
-}
-
-@media (prefers-reduced-motion: no-preference) {
+  margin-top: 5vh;
+  .box {
+    text-align: left;
+  }
 }

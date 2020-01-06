@@ -7,27 +7,28 @@ import './App.scss';
 
 function YearProgress({progress}) {
   return (
-    <div className='progress year-progress'>
-      <div>Year Progress: <strong>{`${progress}%`}</strong></div>
-      <progress className="progress" value={`${progress}`} max="100">{`${progress}%`}</progress>
+    <div className='block box'>
+      <div className='content is-medium'>Year Progress: <strong>{`${progress}%`}</strong></div>
+      <progress className="progress is-info" value={`${progress}`} max="100">{`${progress}%`}</progress>
     </div>
   )
 }
 
 function DayProgress({progress}) {
   return (
-    <div className='progress day-progress'>
-      <div>Day Progress: <strong>{`${progress}%`}</strong></div>
-      <progress className="progress" value={`${progress}`} max="100">{`${progress}%`}</progress>
+    <div className='block box'>
+      <div className='content is-medium'>Day Progress: <strong>{`${progress}%`}</strong></div>
+      <progress className="progress is-primary" value={`${progress}`} max="100">{`${progress}%`}</progress>
+
     </div>
   )
 }
 
 function WeekProgress({progress}) {
   return (
-    <div className='progress week-progress'>
-      <div>Current Week Progress: <strong>{`${progress}%`}</strong></div>
-      <progress className="progress" value={`${progress}`} max="100">{`${progress}%`}</progress>
+    <div className='block box'>
+      <div className='content is-medium'>Current Week Progress: <strong>{`${progress}%`}</strong></div>
+      <progress className="progress is-primary" value={`${progress}`} max="100">{`${progress}%`}</progress>
     </div>
   )
 }
@@ -45,9 +46,11 @@ class App extends React.Component {
   }
   render() {
     return (
-    <div className="App">
-      <h3>{dayjs().year()} so far</h3>
-      <YearProgress progress={this.state.yearProgress} />
+    <div className="container">
+        <h3 className='title is-large'>{dayjs().year()} so far</h3>
+        <div className='block'>
+          <YearProgress progress={this.state.yearProgress} />
+        </div>
       <WeekProgress progress={this.state.weekProgress} />
       <DayProgress progress={this.state.dayProgress} />
     </div>
