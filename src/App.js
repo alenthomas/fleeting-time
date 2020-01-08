@@ -12,7 +12,9 @@ import './App.scss';
 function Progress({progress=0, name='year', className=''}) {
   return (
     <div className={`block box ${className}`}>
-      <div className='content is-medium'>{`${name.charAt(0).toUpperCase()+name.slice(1)} Progress:`} <strong>{`${progress}%`}</strong></div>
+      <div className='content is-medium'>
+        {`${name.charAt(0).toUpperCase() + name.slice(1)} Progress:`} <strong>{`${progress}%`}</strong>
+      </div>
       <progress className="progress is-primary" value={`${progress}`} max="100">{`${progress}%`}</progress>
     </div>
   )
