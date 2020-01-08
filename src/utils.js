@@ -14,28 +14,28 @@ function round(num, decimal = 2) {
 
 export function getRemainingDays() {
   const today = dayjs();
-  const currentYear = dayjs().year();
-  const yearEnd = dayjs(`${currentYear}-12-31`);
-  const days = (days_of_a_year(currentYear) - yearEnd.diff(today, 'day', true)) * 100 / days_of_a_year(currentYear);
+  const yearEnd = dayjs().endOf('year');
+  const days = (days_of_a_year(today.year()) - yearEnd.diff(today, 'day', true)) * 100 / days_of_a_year(today.year());
   return round(days);
 }
 
 export function getRemainingHours() {
   const now = dayjs();
   const dayEnd = dayjs().endOf('day');
-  const hours = (86400 - dayEnd.diff(now, 'second', true)) * 100 / 86400;
-  return round(hours)
+  const hours = (86400 - dayEnd.diff(now, 'second', true)) * 100 / 86400; // 86400 = 1 * 24 * 60 * 60
+  return round(hours);
 }
 
 export function getRemainingDaysInWeek() {
   const now = dayjs();
   const weekEnd = dayjs().endOf('week');
-  const hours = (604800 - weekEnd.diff(now, 'second', true)) * 100 / 604800;
+  const hours = (604800 - weekEnd.diff(now, 'second', true)) * 100 / 604800; // 604800 = 7 * 24 * 60 * 60
   return round(hours);
 }
 
-// export function getRemainingWorkDayHours(start = 9, end = 17) {
-//   const now = dayjs();
-//   const dayEnd = dayjs().hour(hour);
-//   const hours = ()
-// }
+export function getRemainingDaysInMonth() {
+  const now = dayjs();
+  const monthEnd = dayjs().endOf('month');
+  const days = (dayjs().daysInMonth() - monthEnd.diff(now, 'day', true)) * 100 / dayjs().daysInMonth();
+  return round(days);
+}
